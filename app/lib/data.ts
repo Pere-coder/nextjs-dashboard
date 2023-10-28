@@ -154,6 +154,7 @@ export async function fetchInvoiceById(id: string) {
         invoices.status
       FROM invoices
       WHERE invoices.id = ${id};
+      
     `;
 
     const invoice = data.rows.map((invoice) => ({
@@ -228,3 +229,4 @@ export async function getUser(email: string) {
     throw new Error('Failed to fetch user.');
   }
 }
+
